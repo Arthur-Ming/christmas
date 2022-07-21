@@ -1,0 +1,14 @@
+.fa-snowflake {
+  width: 10px;
+  height: 10px;
+  background: url("../assets/svg/snow.svg") 0 0 / cover no-repeat;
+  position: absolute;
+  top: -20px;
+  animation: fall linear forwards;
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(105vh);
+  }
+}

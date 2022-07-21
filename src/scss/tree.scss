@@ -1,0 +1,54 @@
+.tree {
+  background: url("../assets/bg/2.jpg") 50% 0 / cover no-repeat;
+  // background-blend-mode: multiply;
+  transition: background-image 1s ease-in-out;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  flex: 1 1 600px;
+  width: 600px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  @media (max-width: 768px) {
+    flex: 0 0 740px;
+    height: 740px;
+  }
+  @media (max-width: 620px) {
+    max-width: calc(320px + 300 * ((100vw - 320px) / (620 - 320)));
+    flex: 0 0 740px;
+  }
+
+  &__content {
+    //  margin: 0px auto;
+    height: 714px;
+    flex: 0 0 600px;
+    width: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    @media (max-width: 768px) {
+      width: 100%;
+    }
+    @media (max-width: 620px) {
+      max-width: calc(320px + 300 * ((100vw - 320px) / (620 - 320)));
+      flex: 0 0 740px;
+    }
+  }
+  &__img {
+    width: auto;
+    height: auto;
+    position: relative;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  &__map {
+  }
+  .draggable-basket__img {
+    position: absolute;
+  }
+}

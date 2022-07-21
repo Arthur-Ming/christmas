@@ -1,0 +1,98 @@
+.toys-page {
+  display: flex;
+  justify-content: space-between;
+  column-gap: 10px;
+  // padding-left: 320px;
+  @media (max-width: $md3) {
+    display: block;
+  }
+}
+
+.toys {
+  background-color: $bg;
+  width: 100%;
+  &__cards {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 0px;
+    row-gap: 20px;
+    padding: 0px 12px;
+    padding-bottom: 60px;
+    @media (max-width: $md3) {
+      padding-top: 15px;
+    }
+  }
+
+  &__card {
+    flex: 1 1 18%;
+    max-width: 19%;
+    cursor: pointer;
+    @media (max-width: 1500px) {
+      flex: 1 0 24%;
+      max-width: 24%;
+    }
+    @media (max-width: 1190px) {
+      flex: 1 1 31%;
+      max-width: 32%;
+    }
+    @media (max-width: $md3) {
+      flex: 1 1 48%;
+      max-width: 48%;
+    }
+    @media (max-width: $md4) {
+      flex: 1 1 100%;
+      max-width: 100%;
+    }
+  }
+}
+.toy-card {
+  background: radial-gradient(109.56% 109.56% at 0% -2.94%, rgba(255, 255, 255, 0.5) 0%, rgba(179, 246, 255, 0.5) 100%);
+  backdrop-filter: blur(4px);
+  border-radius: 10px;
+  padding: 18px 16px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 16px;
+  transition: all 0.5s ease 0s;
+  &_picked {
+    background: radial-gradient(109.56% 109.56% at 0% -2.94%, rgba(212, 164, 7, 0.5) 0%, rgba(204, 10, 194, 0.5) 100%);
+  }
+  &__name {
+    font-family: Neucha;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 20px;
+    color: $white;
+  }
+  &__text {
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
+    font-family: Steppe;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+  }
+
+  &__icon {
+    display: flex;
+    justify-content: center;
+
+    img {
+      transition: all 0.5s ease 0s;
+      display: block;
+      width: 60%;
+    }
+  }
+}
+.toy-card:hover {
+  .toy-card__icon {
+    img {
+      transform: scale(1.05);
+    }
+  }
+}
